@@ -1,5 +1,5 @@
 {% set name = "dvc-task" %}
-{% set version = "0.1.1" %}
+{% set version = "0.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dvc-task-{{ version }}.tar.gz
-  sha256: 9f5a9fe9c44791c6f87d9bf182115a2a59faf660971c630ae4c7dd16327296e2
+  sha256: 5c5670b70d230f1575758fe30725e76cf94c13ee660261079bd44d43822393d8
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
@@ -20,9 +20,9 @@ requirements:
     - python >=3.7
     - setuptools_scm
   run:
-    - celery >=5.2.0,<6
+    - celery >=5.3.0a1,<6
     - funcy >=1.17
-    - kombu
+    - kombu >=5.3.0a1
     - python >=3.7
     - pywin32-on-windows
     - shortuuid >=1.0.8
