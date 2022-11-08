@@ -1,5 +1,5 @@
 {% set name = "dvc-task" %}
-{% set version = "0.1.4" %}
+{% set version = "0.1.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dvc-task-{{ version }}.tar.gz
-  sha256: ebbdddc3e587d911cb96642de9e42e36ba719d636975bccfa03af53abd235f44
+  sha256: 7ed64b1d83df8be5523852e33485c5c245582cbfc40201733ffc9133de9a60dd
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
